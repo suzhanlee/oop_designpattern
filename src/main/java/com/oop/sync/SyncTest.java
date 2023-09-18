@@ -16,14 +16,12 @@ public class SyncTest {
             for (int i = 0; i < 100; i++) {
                 syncTest.setSharedResource("resource1");
             }
-
         }).start();
 
         new Thread(() -> {
             for (int i = 0; i < 100; i++) {
                 syncTest.setSharedResource("resource2");
             }
-
         }).start();
 
         System.out.println("SyncTest end");
@@ -43,5 +41,4 @@ public class SyncTest {
             System.out.println(sharedResource + " is not same as " + resource);
         }
     }
-
 }
